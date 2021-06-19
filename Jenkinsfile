@@ -6,6 +6,11 @@ node {
     }
 
     stage('Ant build') {
-        sh 'ant -f build.xml'
+        when {
+            branch "Dev"
+        }
+        steps {
+            sh 'ant -f build.xml'
+        }
     }
 }
