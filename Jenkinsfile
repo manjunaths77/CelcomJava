@@ -24,6 +24,9 @@ pipeline {
             }
         }
         stage('Build') {
+            when {
+                branch "Dev"
+            }   
             steps {
             //    ws('/home/jenkins/thiru') {
                     // Run Maven on a Unix agent.
