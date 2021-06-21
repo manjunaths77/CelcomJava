@@ -15,14 +15,7 @@ pipeline {
                     sh "hostname"
             }
         }
-        stage('checkout') {
-            steps {
-            // Get some code from a GitHub repositor
-            //    ws('/home/jenkins/thiru') {
-                   git 'https://github.com/manjunaths77/CelcomJava.git'
-            //    }
-            }
-        }
+
         stage('Build') {
             when {
                 branch "Dev"
