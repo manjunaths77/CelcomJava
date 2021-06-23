@@ -2,7 +2,6 @@ pipeline {
     agent {
         node {
             label 'Dev'
-            customWorkspace "/home/manjus/thiru/Master"
         }
     }
 
@@ -15,9 +14,6 @@ pipeline {
                     sh "hostname"
             }
         }
-        stage('Build') {
-            when {
-                branch "master"
             }   
             steps {
             //    ws('/home/jenkins/thiru') {
