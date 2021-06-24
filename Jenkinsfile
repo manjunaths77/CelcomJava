@@ -15,7 +15,7 @@ pipeline {
                     sh "hostname"
             }
         }
-           
+
         stage('build') {   
             steps {
             //    ws('/home/jenkins/thiru') {
@@ -24,7 +24,6 @@ pipeline {
                     sh "id"
                     sh 'ant -f build.xml'
             //    }
-            }   
+            }
         }
-    }
 }
