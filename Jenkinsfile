@@ -2,6 +2,7 @@ pipeline {
     agent {
         node {
             label 'Dev'
+            customWorkspace "/home/manjus/thiru/Dev"
         }
     }
 
@@ -14,7 +15,8 @@ pipeline {
                     sh "hostname"
             }
         }
-        stage('Build') {
+
+        stage('build') {   
             steps {
             //    ws('/home/jenkins/thiru') {
                     // Run Maven on a Unix agent.
