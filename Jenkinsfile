@@ -14,7 +14,7 @@ pipeline {
                     sh "hostname"
             }
         }
-            }   
+        stage('Build') {
             steps {
             //    ws('/home/jenkins/thiru') {
                     // Run Maven on a Unix agent.
@@ -22,7 +22,6 @@ pipeline {
                     sh "id"
                     sh 'ant -f build.xml'
             //    }
-            }   
+            }
         }
-    }
 }
